@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  font-size: 1rem;
+  margin: 3vw 5vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.divHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  width: 90vw;
+  height: 15vh;
+  border-radius: 2px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 0 
+}
+
+.main-body {
+  display: flex;
+}
+
+.side-bar {
+  width: 25vw;
+  border: 1px solid silver;
+  border-radius: 2px;
+  margin-top: 8vh;
+  margin-bottom: 5vh;
+  padding: 2vw;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+.colors-div {
+  display: flex;
+  flex-direction: row;
+}
+
+.input-color {
+  width: 3.5vw;
+  height: 3.5vw;
+  border: 1px solid silver;
+  margin-right: 0.5vw;
+}
+
+.main-content{
+  width: 75vw;
+  margin-top: 8vh;
+  margin-left: 3vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ }
+
+.individual-tshirt {
+  border: 1px solid silver;
+  border-radius: 2px;
+  width: 20vw;
+  margin-bottom: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.picture-tee {
+  width: 15vw;
+  padding: 1vw;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 5vh;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon-footer {
+  margin-left: 1vw;
+  height: 2vh;
+  opacity: 0.7
 }

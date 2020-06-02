@@ -1,0 +1,49 @@
+[
+    {
+        "name": "Wrap top",
+        "picture": "https://lp.monki.com/app002prod?set=key[resolve.pixelRatio],value[1]&set=key[resolve.width],value[450]&set=key[resolve.height],value[10000]&set=key[resolve.imageFit],value[containerwidth]&set=key[resolve.allowImageUpscaling],value[0]&set=key[resolve.format],value[jpeg]&set=key[resolve.quality],value[90]&set=source[/3f/03/3f034c4cf22193796720d1b5a076486922a46ba1.jpg],origin[dam],type[DESCRIPTIVESTILLLIFE],ImageVersion[1]&call=url[file:/product/dynamic.chain]",
+        "brand": "Monki cares",
+        "price": "15€",
+        "color": "#ffffff"
+    },
+
+    {
+        "name": "Cropped top",
+        "picture": "https://lp.monki.com/app002prod?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B400%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&set=key%5Bresolve.quality%5D,value%5B90%5D&set=ImageVersion%5B1%5D,origin%5Bdam%5D,source%5B/fb/dd/fbdd7aca61accc8b14d44b2fcd3dc9310ead4149.jpg%5D,type%5BDESCRIPTIVESTILLLIFE%5D&call=url%5Bfile:/product/dynamic.chain%5D",
+        "brand": "Monki",
+        "price": "15€",
+        "color": "#000000"
+    },
+
+    {
+        "name": "Ruffles tee",
+        "picture": "https://lp.monki.com/app002prod?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B400%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&set=key%5Bresolve.quality%5D,value%5B90%5D&set=ImageVersion%5B1%5D,origin%5Bdam%5D,source%5B/72/6a/726ac80200bbb6bbc3230a54d62eb7f2dce0df0a.jpg%5D,type%5BDESCRIPTIVESTILLLIFE%5D&call=url%5Bfile:/product/dynamic.chain%5D",
+        "brand": "Monki",
+        "price": "15€",
+        "color": "#e6e6fa"
+    },
+
+    {
+        "name": "Tank top",
+        "picture": "https://lp.monki.com/app002prod?set=key[resolve.pixelRatio],value[1]&set=key[resolve.width],value[450]&set=key[resolve.height],value[10000]&set=key[resolve.imageFit],value[containerwidth]&set=key[resolve.allowImageUpscaling],value[0]&set=key[resolve.format],value[jpeg]&set=key[resolve.quality],value[90]&set=source[/a1/5f/a15f55ae802722366dc7585d8fb9f8a2a470ed69.jpg],origin[dam],type[DESCRIPTIVESTILLLIFE],ImageVersion[1]&call=url[file:/product/dynamic.chain]",
+        "brand": "Monki",
+        "price": "15€",
+        "color": "#000000"
+    },
+
+    {
+        "name": "Soft tee",
+        "picture": "https://lp.monki.com/app002prod?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B450%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&set=key%5Bresolve.quality%5D,value%5B90%5D&set=ImageVersion%5B201912270912%5D,source%5B02_0591326_124_001%5D,type%5BPRODUCT%5D&call=url%5Bfile:/product/dynamic.chain%5D",
+        "brand": "Monki cares",
+        "price": "10€",
+        "color": "#e6e6fa"
+    },
+
+    {
+        "name": "Ribbed tee",
+        "picture": "https://lp.monki.com/app002prod?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B450%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&set=key%5Bresolve.quality%5D,value%5B90%5D&set=ImageVersion%5B1%5D,origin%5Bdam%5D,source%5B/61/bc/61bc1ed489b3adc1d8e46fc99d175676acf745a2.jpg%5D,type%5BDESCRIPTIVESTILLLIFE%5D&call=url%5Bfile:/product/dynamic.chain%5D",
+        "brand": "Monki cares",
+        "price": "10€",
+        "color": "#cae3c6"
+    }
+]
