@@ -13,7 +13,9 @@ export default class App extends Component {
     allTees: teeshirts,
     brands: [],
     colors: [],
-    tees: teeshirts
+    tees: teeshirts,
+    filterBrand: [],
+    filterColor: []
   }
 
   componentDidMount() {
@@ -30,17 +32,40 @@ export default class App extends Component {
     this.setState({colors: currentColors})
   }
 
-  handleColor = (color) => {
-    let filteredTees = [...this.state.tees]
-    let tempTees = filteredTees.filter(tee => tee.color === color);
-    if(this.state.tees !== teeshirts) {
-      tempTees.forEach(tee => {
-        !filteredTees.includes(tee) && filteredTees.push(tee)
-      })
-        this.setState({tees: filteredTees})
-     } else {
-        this.setState({tees: tempTees})
+  handleBrand = (brand) => {
+    this.setState({filterBrand: this.state.filterBrand.push(brand)})
+    let filteredTees = [...this.state.tees];
+    let finalTees = [];
+    filteredTees.forEach(tee => {
+      if(this.state.filterColor.length===0) {
+        this.state.filterBrand.includes(tee.brand) && finalTees.push(tee)
+      } else {
+        if(this.state.filterBrand.includes(tee.brand) && this.state.filterColor.includes(tee.color)) {
+          finalTees.push(tee)
+        }
       }
+    })
+    console.log(finalTees)
+    this.setState({tees: finalTees})
+  }
+
+  handleColor = (color) => {
+    this.setState({filterColor: this.state.filterColor.push(color)})
+    console.log(this.state.filterColor)
+    let filteredTees = [...this.state.tees];
+    let finalTees = [];
+    console.log(filteredTees)
+    filteredTees.forEach(tee => {
+      if(this.state.filterBrand.length===0) {
+        console.log("coucou")
+        this.state.filterColor.includes(tee.color) && finalTees.push(tee)
+      } else {
+        if(this.state.filterBrand.includes(tee.brand) && this.state.filterColor.includes(tee.color)) {
+          finalTees.push(tee)
+        }
+      }
+    })
+    this.setState({tees: finalTees})
   }
 
 
