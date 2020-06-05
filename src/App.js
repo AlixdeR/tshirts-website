@@ -13,9 +13,7 @@ export default class App extends Component {
     allTees: teeshirts,
     brands: [],
     colors: [],
-    tees: teeshirts,
-    filterBrand: [],
-    filterColor: []
+    tees: teeshirts
   }
 
   componentDidMount() {
@@ -32,42 +30,6 @@ export default class App extends Component {
     this.setState({colors: currentColors})
   }
 
-  handleBrand = (brand) => {
-    this.setState({filterBrand: this.state.filterBrand.push(brand)})
-    let filteredTees = [...this.state.tees];
-    let finalTees = [];
-    filteredTees.forEach(tee => {
-      if(this.state.filterColor.length===0) {
-        this.state.filterBrand.includes(tee.brand) && finalTees.push(tee)
-      } else {
-        if(this.state.filterBrand.includes(tee.brand) && this.state.filterColor.includes(tee.color)) {
-          finalTees.push(tee)
-        }
-      }
-    })
-    console.log(finalTees)
-    this.setState({tees: finalTees})
-  }
-
-  handleColor = (color) => {
-    this.setState({filterColor: this.state.filterColor.push(color)})
-    console.log(this.state.filterColor)
-    let filteredTees = [...this.state.tees];
-    let finalTees = [];
-    console.log(filteredTees)
-    filteredTees.forEach(tee => {
-      if(this.state.filterBrand.length===0) {
-        console.log("coucou")
-        this.state.filterColor.includes(tee.color) && finalTees.push(tee)
-      } else {
-        if(this.state.filterBrand.includes(tee.brand) && this.state.filterColor.includes(tee.color)) {
-          finalTees.push(tee)
-        }
-      }
-    })
-    this.setState({tees: finalTees})
-  }
-
 
   render() {
     return (
@@ -78,16 +40,22 @@ export default class App extends Component {
 
         <div className="side-bar">
 
-          <h3>Tri par marque</h3>
-          {this.state.brands.map((brand, i) => <CheckboxBrand key={i} brand={brand} filterBrand={this.handleBrand}/>)}
-          
-          <h3>Tri par couleur</h3>
-          <div className="colors-div">
-            {this.state.colors.map((color, i) => <ColorFilter key={i} color={color} filterColor={this.handleColor}/>)}
+          <div className="div-filter">
+            <h3>Tri par marque</h3>
+            {this.state.brands.map((brand, i) => <CheckboxBrand key={i} brand={brand}/>)}
           </div>
 
-          <h3>Tri par prix</h3>
+          <div className="div-filter">
+            <h3>Tri par couleur</h3>
+            <div className="colors-div">
+              {this.state.colors.map((color, i) => <ColorFilter key={i} color={color}/>)}
+            </div>
+          </div>
+
+          <div className="div-filter">
+            <h3>Tri par prix</h3>
             <input type="range" name="price"></input>
+          </div>
           
         </div>
 

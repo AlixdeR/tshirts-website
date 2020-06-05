@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function checkboxBrand( { brand, filterBrand } ) {
+export default function checkboxBrand( { brand } ) {
     return (
         <div>
-            <input type="checkbox" name="brand" onClick={() => filterBrand(brand)}></input>
+            <input className="input-brand" type="checkbox" name="brand"></input>
             <label htmlFor="brand">{brand}</label>
         </div>
     )
