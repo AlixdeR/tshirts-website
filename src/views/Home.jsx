@@ -49,7 +49,7 @@ export default class Home extends Component {
     
               <div className="div-filter">
                 <h3>Tri par prix</h3>
-                <input type="range" name="price"></input>
+                <input type="range" name="price" hidden></input>
               </div>
               
             </div>
