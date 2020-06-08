@@ -65,8 +65,8 @@ h3 {
 }
 
 .input-color {
-  width: 3.5vw;
-  height: 3.5vw;
+  width: 2.5vw;
+  height: 2.5vw;
   border: 1px solid silver;
   margin-right: 0.5vw;
 }
@@ -88,6 +88,29 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.container {
+    border: 0px solid silver;
+    border-radius: 2px;
+    width: 20vw;
+}
+
+.icons-on-tee {
+  visibility: hidden;
+}
+
+.icon-on-tee {
+  margin: 1vw 2vw;
+  color: grey;
+}
+
+.container :hover > .icons-on-tee {
+  visibility: visible;
+}
+
+.container :hover {
+  opacity: 0.8;
 }
 
 .picture-tee {
@@ -201,13 +224,36 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+
+  .container {
+    border: 0px solid silver;
+    border-radius: 2px;
+    width: 28vw;
+}
+
+.icons-on-tee {
+  visibility: hidden;
+}
+
+.icon-on-tee {
+  margin: 1vw 2vw;
+  color: grey;
+}
+
+.container :hover > .icons-on-tee {
+  visibility: visible;
+}
+
+.container :hover {
+  opacity: 0.8;
+}
   
-  .picture-tee {
-    width: 80%;
-    padding: 1vw;
-  }
+.picture-tee {
+  width: 80%;
+  padding: 1vw;
+}
   
-  footer {
+footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -319,12 +365,35 @@ footer {
   .individual-tshirt {
     border: 1px solid silver;
     border-radius: 2px;
-    width: 94vw;
+    width: 59vw;
     margin-bottom: 3vh;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  
+  .container {
+    border: 0px solid silver;
+    border-radius: 2px;
+    width: 28vw;
+}
+
+.icons-on-tee {
+  visibility: hidden;
+}
+
+.icon-on-tee {
+  margin: 4vw 2vw 0;
+  color: grey;
+}
+
+.container :hover > .icons-on-tee {
+  visibility: visible;
+}
+
+.container :hover {
+  opacity: 0.8;
+}
   
   .picture-tee {
     width: 60%;
