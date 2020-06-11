@@ -9,7 +9,7 @@ export default function ThsirtBox({ teeshirt }) {
             <p className="tee-name">{teeshirt.name}</p>
             <img className="picture-tee" src={teeshirt.picture} alt={teeshirt.name}/>
             <div className="icons-on-tee">
-                <FontAwesomeIcon className="icon-on-tee" icon={faShoppingBasket} />
+                <FontAwesomeIcon className="icon-on-tee" icon={faShoppingBasket}/>
                 <FontAwesomeIcon className="icon-on-tee" icon={faHeart} />
             </div>
             <p className="tee-price">{teeshirt.price}</p> 

@@ -1,9 +1,14 @@
-@media only screen and (min-width: 992px) {
 body {
   font-family: 'Courier New', Courier, monospace;
   color: black;
   font-size: 1rem;
   margin: 3vw 5vw;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin: 3vw;
+  }
 }
 
 .divHeader {
@@ -14,9 +19,9 @@ body {
 }
 
 header {
+  border-radius: 2px;
   width: 90vw;
   height: 15vh;
-  border-radius: 2px;
 }
 
 .header {
@@ -24,6 +29,28 @@ header {
   font-weight: bold;
   position: absolute;
   margin-top: 0 
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  header {
+    width: 90vw;
+    height: 10vh;
+  }
+  
+  .header {
+    font-size: 1.75rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {  
+  header {
+    width: 94vw;
+    height: 13vh;
+  }
+  
+  .header {
+    font-size: 1.5rem;
+  }
 }
 
 a {
@@ -40,6 +67,28 @@ a {
   margin-top: 7.5vh;
 }
 
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .nav-bar {
+    margin-top: 5vh;
+    margin-bottom: 0;
+    font-size: 1.15rem;
+  }
+}
+
+@media only screen and (max-width: 600px) { 
+  .nav-bar {
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    font-size: 1.1rem;
+  }
+
+  .mobile-hidden {
+    display: none;
+  }
+}
+
 .main-body {
   display: flex;
 }
@@ -47,7 +96,7 @@ a {
 .side-bar {
   width: 20vw;
   border-radius: 2px;
-  margin-top: 2.5vh;
+  margin-top: 4.5vh;
   margin-bottom: 5vh;
   margin-right: 5vw;
   padding-left: 2vw;
@@ -59,6 +108,32 @@ h3 {
   font-size: 1.2rem;
 }
 
+@media only screen and (min-width: 600px) and (max-width: 992px) {   
+  .side-bar {
+    width: 25vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+  
+  h3 {
+    font-size: 1.15rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {       
+  .side-bar {
+    width: 25vw;
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+}
+   
 .colors-div {
   display: flex;
   flex-direction: row;
@@ -69,6 +144,20 @@ h3 {
   height: 2.5vw;
   border: 1px solid silver;
   margin-right: 0.5vw;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  .input-color {
+    width: 3.5vw;
+    height: 3.5vw;
+  }
+}
+    
+@media only screen and (max-width: 600px) {     
+  .input-color {
+    width: 3.5vw;
+    height: 3.5vw;
+  }
 }
 
 .main-content{
@@ -90,19 +179,63 @@ h3 {
   align-items: center;
 }
 
+@media only screen and (min-width: 600px) and (max-width: 992px) {     
+  .main-content{
+    width: 75vw;
+    margin-top: 6vh;
+    margin-left: 30vw;
+   }
+  
+  .individual-tshirt {
+    width: 28vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .input-brand {
+    width: 15%;
+  }
+  
+  .main-content{
+    width: 60vw;
+    margin: 3vh 34vw 0;
+   }
+  
+  .individual-tshirt {
+    width: 59vw;
+    margin-bottom: 3vh;
+  }
+}
+
 .container {
-    border: 0px solid silver;
-    border-radius: 2px;
-    width: 20vw;
+  border: 0px solid silver;
+  border-radius: 2px;
+  width: 20vw;
 }
 
 .icons-on-tee {
-  visibility: hidden;
+visibility: hidden;
 }
 
 .icon-on-tee {
-  margin: 1vw 2vw;
-  color: grey;
+margin: 1vw 2vw;
+color: grey;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) { 
+  .container {
+    width: 28vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {     
+  .container {
+    width: 28vw;
+  } 
+
+  .icon-on-tee {
+    margin: 4vw 2vw 0;
+  }
 }
 
 .container :hover > .icons-on-tee {
@@ -116,6 +249,45 @@ h3 {
 .picture-tee {
   width: 80%;
   padding: 1vw;
+}
+
+@media only screen and (max-width: 600px) { 
+  .picture-tee {
+    width: 60%;
+  }
+}
+
+.page-title {
+  margin: 7vh 0;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.basket-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.total-hr {
+  width: 20vw;
+}
+
+.btn {
+  width: 20vw;
+  height: 7vh;
+  padding: 1vw;
+  margin: 2vw;
+  border-radius: 2px;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: rgb(73, 72, 72)
+
 }
 
 footer {
@@ -130,288 +302,4 @@ footer {
   margin-left: 1vw;
   height: 2vh;
   opacity: 0.7
-}
-}
-
-@media only screen and (min-width: 600px) and (max-width: 992px) {
-  body {
-    font-family: 'Courier New', Courier, monospace;
-    color: black;
-    font-size: 1rem;
-    margin: 3vw 5vw;
-  }
-  
-  .divHeader {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  header {
-    width: 90vw;
-    height: 10vh;
-    border-radius: 2px;
-  }
-  
-  .header {
-    font-size: 1.75rem;
-    font-weight: bold;
-    position: absolute;
-    margin-top: 0 
-  }
-  
-  a {
-    color: black;
-    text-decoration: none;
-  }
-  
-  .nav-bar {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 5vh;
-    margin-bottom: 0;
-    font-size: 1.15rem;
-  }
-
-  .main-body {
-    display: flex;
-  }
-  
-  .side-bar {
-    width: 25vw;
-    border-radius: 2px;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    position: fixed;
-  }
-  
-  h3 {
-    font-size: 1.15rem;
-  }
-  
-  .colors-div {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .input-color {
-    width: 3.5vw;
-    height: 3.5vw;
-    border: 1px solid silver;
-    margin-right: 0.5vw;
-  }
-  
-  .main-content{
-    width: 75vw;
-    margin-top: 6vh;
-    margin-left: 30vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-   }
-  
-  .individual-tshirt {
-    border: 1px solid silver;
-    border-radius: 2px;
-    width: 28vw;
-    margin-bottom: 5vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .container {
-    border: 0px solid silver;
-    border-radius: 2px;
-    width: 28vw;
-}
-
-.icons-on-tee {
-  visibility: hidden;
-}
-
-.icon-on-tee {
-  margin: 1vw 2vw;
-  color: grey;
-}
-
-.container :hover > .icons-on-tee {
-  visibility: visible;
-}
-
-.container :hover {
-  opacity: 0.8;
-}
-  
-.picture-tee {
-  width: 80%;
-  padding: 1vw;
-}
-  
-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5vh;
-  }
-  
-  .icon-footer {
-    margin-left: 1vw;
-    height: 2vh;
-    opacity: 0.7
-  }
-
-}
-
-@media only screen and (max-width: 600px) {
-  body {
-    font-family: 'Courier New', Courier, monospace;
-    color: black;
-    font-size: 1rem;
-    margin: 3vw;
-  }
-  
-  .divHeader {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  header {
-    width: 94vw;
-    height: 13vh;
-    border-radius: 2px;
-  }
-  
-  .header {
-    font-size: 1.5rem;
-    font-weight: bold;
-    position: absolute;
-    margin-top: 0 
-  }
-
-  a {
-    color: black;
-    text-decoration: none;
-  }
-
-  .nav-bar-container {
-    position: fixed;
-  }
-
-  .nav-bar {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 5vh;
-    margin-bottom: 2vh;
-    font-size: 1.1rem;
-  }
-
-  .mobile-hidden {
-    display: none;
-  }
-
-  .main-body {
-    display: flex;
-  }
-  
-  .side-bar {
-    width: 25vw;
-    border-radius: 2px;
-    margin-bottom: 3vh;
-    padding-left: 3vw;
-    padding-right: 3vw;
-    position: fixed;
-  }
-
-  h3 {
-    font-size: 1.1rem;
-  }
-  
-  .colors-div {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .input-color {
-    width: 3.5vw;
-    height: 3.5vw;
-    border: 1px solid silver;
-    margin-right: 0.5vw;
-  }
-
-  .input-brand {
-    width: 15%;
-  }
-  
-  .main-content{
-    width: 60vw;
-    margin: 3vh 34vw 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-   }
-  
-  .individual-tshirt {
-    border: 1px solid silver;
-    border-radius: 2px;
-    width: 59vw;
-    margin-bottom: 3vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .container {
-    border: 0px solid silver;
-    border-radius: 2px;
-    width: 28vw;
-}
-
-.icons-on-tee {
-  visibility: hidden;
-}
-
-.icon-on-tee {
-  margin: 4vw 2vw 0;
-  color: grey;
-}
-
-.container :hover > .icons-on-tee {
-  visibility: visible;
-}
-
-.container :hover {
-  opacity: 0.8;
-}
-  
-  .picture-tee {
-    width: 60%;
-    padding: 1vw;
-  }
-  
-  footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5vh;
-  }
-  
-  .icon-footer {
-    margin-left: 1vw;
-    height: 2vh;
-    opacity: 0.7
-  }
-
 }
