@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
-import ThsirtBox from '../components/ThsirtBox';
+import ThsirtBox from '../components/TshirtBox';
 import teeshirts from "../teeshirts.json";
 import CheckboxBrand from '../components/CheckboxBrand';
 import ColorFilter from '../components/ColorFilter';
@@ -10,7 +10,15 @@ export default class Home extends Component {
         allTees: teeshirts,
         brands: [],
         colors: [],
-        tees: teeshirts
+        tees: teeshirts, 
+        myBasket: []
+      }
+
+      handleBasketClick = (teeshirt) => {
+        let basket = [...this.state.myBasket]
+        basket.push(teeshirt)
+        this.setState({myBasket : basket})
+        this.props.getBasketUp(teeshirt)
       }
     
       componentDidMount() {
@@ -24,9 +32,10 @@ export default class Home extends Component {
         this.state.tees.forEach(tee => {
           !currentColors.includes(tee.color) && currentColors.push(tee.color)
         })
-        this.setState({colors: currentColors})
+        this.setState({colors: currentColors});
       }
     
+
     
       render() {
         return (
@@ -55,7 +64,7 @@ export default class Home extends Component {
             </div>
     
             <div className="main-content">
-              {this.state.tees.map((tee, i) => <ThsirtBox teeshirt={tee} key={i}/>)}
+              {this.state.tees.map((tee, i) => <ThsirtBox teeshirt={tee} key={i} handleBasketClick={this.handleBasketClick}/>)}
             </div>
 
           </div>
