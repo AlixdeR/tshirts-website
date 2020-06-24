@@ -12,7 +12,7 @@ export default function TshirtBox ({teeshirt, handleBasketClick}) {
                         <FontAwesomeIcon className="icon-on-tee" icon={faShoppingBasket} onClick={() => handleBasketClick(teeshirt)}/>
                         <FontAwesomeIcon className="icon-on-tee" icon={faHeart} />
                     </div>
-                    <p className="tee-price">{teeshirt.price}</p> 
+                    <p className="tee-price">{teeshirt.price}€</p> 
                 </div>
             </div>    
        )

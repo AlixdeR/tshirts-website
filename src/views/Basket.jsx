@@ -4,9 +4,7 @@ import BasketItem from '../components/BasketItem';
 
 export default class Basket extends Component {
         state = {
-            myBasket: [],
-            BasketToDisplay: [],
-            totalBasket: 0
+            myBasket: []
         }
 
         componentDidMount(){
@@ -14,7 +12,7 @@ export default class Basket extends Component {
                 .then(response => {
                    response.json();
                  })
-                 .then(() => this.setState({ myBasket: ls.get('myBasket') || [] }))
+                 .then(() => this.setState({ myBasket: ls.get('myBasket') || []}))
                  .catch(err => console.log(err))
         }
 
@@ -26,7 +24,6 @@ export default class Basket extends Component {
         }
         
         render() {
-            
 
         return (
             <div className="basket-page">
@@ -37,7 +34,10 @@ export default class Basket extends Component {
                 )}
             </ul>
             <hr className="total-hr"/>
-            <p>Total = {this.state.totalBasket}</p>
+            <p>Total = {this.state.myBasket.reduce((sum, el) => (
+                sum += Number(el.qty) * Number(el.price)
+                ), 0)}€
+            </p>
             <button className="btn">Je passe commande!</button>
         </div>
         )
