@@ -6,36 +6,21 @@ import CheckboxBrand from '../components/CheckboxBrand';
 import ColorFilter from '../components/ColorFilter';
 import ls from 'local-storage';
 
+
 export default class Home extends Component {
     state = {
         allTees: teeshirts,
         brands: [],
         colors: [],
-        tees: teeshirts, 
-        myBasket: []
+        tees: teeshirts
       }
 
       handleBasketClick = (teeshirt) => {
-        let basket = [...this.state.myBasket];
-        console.log([...this.state.myBasket])
-        if(basket.includes(teeshirt)) {
-          teeshirt.qty ++
-        } else {
-          teeshirt.qty = 1;
-          basket.push(teeshirt);
-        }
-        this.setState({myBasket : basket})
-        ls.set("myBasket", basket)
+        this.props.getBasketUp(teeshirt)
+        
       }
     
       componentDidMount() {
-          fetch("http://localhost:3000/")
-               .then(response => {
-                 response.json();
-               })
-               .then(() => this.setState({ myBasket: ls.get('myBasket') || [] }))
-               .catch(err => console.log(err))
-        
         let currentBrands = [];
         this.state.tees.forEach(tee => {
           !currentBrands.includes(tee.brand) && currentBrands.push(tee.brand)

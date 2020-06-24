@@ -6,11 +6,33 @@ import Home from './views/Home';
 import Footer from './components/Footer';
 import Basket from './views/Basket';
 import NavBar from './components/NavBar';
+import ls from 'local-storage';
 
 export default class App extends Component {
 
   state = {
     myBasket : []
+  }
+
+  getBasketUp = (teeshirt) => {
+    let basket = [...this.state.myBasket];
+    if(basket.includes(teeshirt)) {
+      teeshirt.qty ++
+    } else {
+      teeshirt.qty = 1;
+      basket.push(teeshirt);
+    }
+    this.setState({myBasket: basket})
+    ls.set("myBasket", basket);
+  }
+
+  componentDidMount() {
+    fetch("http://localhost:3000/")
+               .then(response => {
+                 response.json();
+               })
+               .then(() => this.setState({ myBasket: ls.get('myBasket') || [] }))
+               .catch(err => console.log(err))
   }
 
   render() {
