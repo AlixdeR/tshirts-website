@@ -222,6 +222,49 @@ h3 {
   color: grey;
 }
 
+.icon-check {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  visibility: hidden
+}
+
+.icon-check-visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid grey;
+  border-radius: 2px;
+  background-color: white;
+  color: grey;
+  padding: 1vw;
+  position: absolute;
+  margin-top: 25vh;
+  opacity: 0.9;
+  visibility: visible
+}
+
+.added {
+  font-weight: bold;
+  width: 10vw;
+  text-align: center;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 992px) { 
+  .added {
+    width: 15vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {     
+  .added {
+    width: 25vw;
+  }
+}
+
 @media only screen and (min-width: 600px) and (max-width: 992px) { 
   .container {
     width: 28vw;
