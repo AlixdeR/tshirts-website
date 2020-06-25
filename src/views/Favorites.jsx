@@ -29,7 +29,7 @@ export default class Favorites extends Component {
 
     render() {
     return (
-        <div>
+        <div className="fav-page">
             <h3 className="page-title">Mes favoris</h3>
             <div className="fav-list">
                 {this.state.myFav.map((elem,i) => 

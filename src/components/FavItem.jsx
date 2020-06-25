@@ -12,13 +12,13 @@ export default function FavItem({teeshirt, deleteElem, handleBasketClick}) {
 
     return (
 
-        <div className="container">
+        <div className="container container-fav">
                 <div className="individual-fav">
                     <p className="tee-name">{teeshirt.name}</p>
                     <img className="picture-tee" src={teeshirt.picture} alt={teeshirt.name}/>
-                    <div className= {checkedBasket? "icon-check" : "icon-check-visible"}>
-                        <FontAwesomeIcon className="fa-2x" icon={faCheck}/>
-                        <p className="added">Ajouté au panier!</p>
+                    <div className= {checkedBasket? "icon-check icon-check-fav" : "icon-check-visible icon-check-fav"}>
+                        <FontAwesomeIcon className="basket-check-fav fa-2x" icon={faCheck}/>
+                        <p className="added added-fav">Ajouté au panier!</p>
                     </div>
                     <div className="icons-on-tee">
                         <FontAwesomeIcon className="icon-on-fav" icon={faShoppingBasket} onClick={() => {
