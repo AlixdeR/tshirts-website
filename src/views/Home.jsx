@@ -16,7 +16,10 @@ export default class Home extends Component {
 
       handleBasketClick = (teeshirt) => {
         this.props.getBasketUp(teeshirt)
-        
+      }
+
+      handleFavClick = (teeshirt) => {
+        this.props.getFavUp(teeshirt)
       }
     
       componentDidMount() {
@@ -62,7 +65,7 @@ export default class Home extends Component {
             </div>
     
             <div className="main-content">
-              {this.state.tees.map((tee, i) => <ThsirtBox teeshirt={tee} key={i} handleBasketClick={this.handleBasketClick}/>)}
+              {this.state.tees.map((tee, i) => <ThsirtBox teeshirt={tee} key={i} handleBasketClick={this.handleBasketClick} handleFavClick={this.handleFavClick}/>)}
             </div>
 
           </div>
