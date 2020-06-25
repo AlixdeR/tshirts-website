@@ -3,30 +3,30 @@ import ls from 'local-storage'
 import BasketItem from '../components/BasketItem';
 
 export default class Basket extends Component {
-        state = {
-            myBasket: []
-        }
+    state = {
+        myBasket: []
+    }
 
-        componentDidMount(){
-            fetch("http://localhost:3000/")
-                .then(response => {
-                   response.json();
-                 })
-                 .then(() => this.setState({ myBasket: ls.get('myBasket') || []}))
-                 .catch(err => console.log(err))
-        }
+    componentDidMount(){
+        fetch("http://localhost:3000/")
+            .then(response => {
+                response.json();
+                })
+            .then(() => this.setState({ myBasket: ls.get('myBasket') || []}))
+            .catch(err => console.log(err))
+    }
 
-        deleteElem = (elem) => {
-            let basket = [...this.state.myBasket]
-            let newBasket = basket.filter(e => e.name!==elem.name)
-            this.setState({myBasket: newBasket})
-            ls.set('myBasket', newBasket)
-        }
+    deleteElem = (elem) => {
+        let basket = [...this.state.myBasket]
+        let newBasket = basket.filter(e => e.name!==elem.name)
+        this.setState({myBasket: newBasket})
+        ls.set('myBasket', newBasket)
+    }
         
-        render() {
+    render() {
 
-        return (
-            <div className="basket-page">
+    return (
+        <div className="basket-page">
             <h3 className="page-title">Mes articles</h3>
             <ul className="basket-list">
                 {this.state.myBasket.map((elem,i) => 
@@ -40,7 +40,7 @@ export default class Basket extends Component {
             </p>
             <button className="btn">Je passe commande!</button>
         </div>
-        )
-        }
+    )
     }
+}
 

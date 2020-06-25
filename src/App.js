@@ -14,18 +14,6 @@ export default class App extends Component {
     myBasket : []
   }
 
-  getBasketUp = (teeshirt) => {
-    let basket = [...this.state.myBasket];
-    if(basket.includes(teeshirt)) {
-      teeshirt.qty ++
-    } else {
-      teeshirt.qty = 1;
-      basket.push(teeshirt);
-    }
-    this.setState({myBasket: basket})
-    ls.set("myBasket", basket);
-  }
-
   componentDidMount() {
     fetch("http://localhost:3000/")
                .then(response => {
@@ -33,6 +21,24 @@ export default class App extends Component {
                })
                .then(() => this.setState({ myBasket: ls.get('myBasket') || [] }))
                .catch(err => console.log(err))
+  }
+
+  getBasketUp = (teeshirt) => {
+    let basket = [...this.state.myBasket];
+    let filteredBasket = basket.filter(e => e.name===teeshirt.name)
+    console.log(filteredBasket)
+    
+      if(filteredBasket.length===1) {
+        for(let i=0; i<basket.length; i++) {
+          basket[i]===filteredBasket[0] && basket[i].qty ++;
+        }
+      } else {
+        teeshirt.qty = 1;
+        basket.push(teeshirt);
+      }
+    
+    this.setState({myBasket: basket})
+    ls.set("myBasket", basket);
   }
 
   render() {

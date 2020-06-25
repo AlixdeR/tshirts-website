@@ -4,7 +4,6 @@ import ThsirtBox from '../components/TshirtBox';
 import teeshirts from "../teeshirts.json";
 import CheckboxBrand from '../components/CheckboxBrand';
 import ColorFilter from '../components/ColorFilter';
-import ls from 'local-storage';
 
 
 export default class Home extends Component {
