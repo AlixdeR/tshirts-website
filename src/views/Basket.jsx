@@ -22,6 +22,31 @@ export default class Basket extends Component {
         this.setState({myBasket: newBasket})
         ls.set('myBasket', newBasket)
     }
+
+    handleQuantityMinus = (elem) => {
+        let basket = [...this.state.myBasket]
+        for(let i=0; i<basket.length; i++) {
+            if(basket[i]===elem  && basket[i].qty>1) {
+                basket[i].qty --;
+                this.setState({myBasket: basket});
+                ls.set('myBasket', basket)
+            } else if (basket[i]===elem && basket[i].qty===1) {
+                let newBasket = basket.filter(e => e!==basket[i]);
+                console.log(newBasket)
+                this.setState({myBasket: newBasket});
+                ls.set('myBasket', newBasket)
+            }
+        }
+    }
+
+    handleQuantityPlus = (elem) => {
+        let basket = [...this.state.myBasket]
+        for(let i=0; i<basket.length; i++) {
+            basket[i]===elem && basket[i].qty ++
+        }
+        this.setState({myBasket: basket})
+        ls.set('myBasket', basket)
+    }
         
     render() {
 
@@ -30,7 +55,7 @@ export default class Basket extends Component {
             <h3 className="page-title">Mes articles</h3>
             <ul className="basket-list">
                 {this.state.myBasket.map((elem,i) => 
-                    <BasketItem elem={elem} key={i} deleteElem={this.deleteElem} /> 
+                    <BasketItem elem={elem} key={i} deleteElem={this.deleteElem} handleQuantityMinus={this.handleQuantityMinus} handleQuantityPlus={this.handleQuantityPlus}/> 
                 )}
             </ul>
             <hr className="total-hr"/>
